@@ -14,7 +14,7 @@ class MajorSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('major')->insert([
+        DB::table('majors')->insert([
             ['chord'=>'C'],
             ['chord'=>'Cs'],
             ['chord'=>'D'],

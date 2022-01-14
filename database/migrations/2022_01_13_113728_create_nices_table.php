@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNiceTable extends Migration
+class CreateNicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateNiceTable extends Migration
      */
     public function up()
     {
-        Schema::create('nice', function (Blueprint $table) {
+        Schema::create('nices', function (Blueprint $table) {
             $table->id();
 
             $table
             ->unsignedInteger('post_id');
             $table
-            ->foreign('post_id')->references('id')->on('post')
+            ->foreign('post_id')->references('id')->on('posts')
             ->onUpdate('CASCADE')->onDelete('CASCADE');
 
             $table
@@ -41,6 +41,6 @@ class CreateNiceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nice');
+        Schema::dropIfExists('nices');
     }
 }

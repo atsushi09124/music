@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MinorSeeder extends Seeder
 {
@@ -13,6 +14,32 @@ class MinorSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('majors')->insert([
+            ['chord'=>'Cm'],
+            ['chord'=>'Csm'],
+            ['chord'=>'Dm'],
+            ['chord'=>'Dsm'],
+            ['chord'=>'Em'],
+            ['chord'=>'Fm'],
+            ['chord'=>'Fsm'],
+            ['chord'=>'Gm'],
+            ['chord'=>'Gsm'],
+            ['chord'=>'Am'],
+            ['chord'=>'Asm'],
+            ['chord'=>'Bm'],
+
+            ['chord'=>'Cm'],
+            ['chord'=>'Csm'],
+            ['chord'=>'Dm'],
+            ['chord'=>'Dsm'],
+            ['chord'=>'Em'],
+            ['chord'=>'Fm'],
+            ['chord'=>'Fsm'],
+            ['chord'=>'Gm'],
+            ['chord'=>'Gsm'],
+            ['chord'=>'Am'],
+            ['chord'=>'Asm'],
+            ['chord'=>'Bm'],
+        ]);
     }
 }
