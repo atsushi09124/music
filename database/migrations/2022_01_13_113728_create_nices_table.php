@@ -19,8 +19,7 @@ class CreateNicesTable extends Migration
             $table
             ->unsignedInteger('post_id');
             $table
-            ->foreign('post_id')->references('id')->on('posts')
-            ->onUpdate('CASCADE')->onDelete('CASCADE');
+            ->foreign('post_id')->references('id')->on('posts');
 
             $table
             ->unsignedInteger('user_id');

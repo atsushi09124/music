@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             MajorSeeder::class,
             MinorSeeder::class,
-            NiceSeeder::class,
-            PostSeeder::class
+            PostSeeder::class,
+            NiceSeeder::class
         ]);
     }
 }
