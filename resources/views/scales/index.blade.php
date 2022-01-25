@@ -12,6 +12,7 @@
 
                     <section class="text-gray-600 body-font">
                         <div class="container px-5 py-24 mx-auto">
+
                             <div class="flex flex-wrap w-full mb-6">
                                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
                                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Support Make Music<br>弾き語り作曲支援サイト</h1>
@@ -29,53 +30,61 @@
                                 <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                             </div>
 
-                            {{-- <div class="w-full flex">
-
-                                <div class="w-40">
-                                    <input type="submit" value="C" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                    <input type="submit" value="C#" class="flex mx-auto mt-16 text-white w-20 bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-                                </div>
-                                <div class="w-40">
-                                    <input type="submit" value="D" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                    <input type="submit" value="D#" class="flex mx-auto mt-16 text-white w-20 bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-                                </div>
-                                <div class="w-40">
-                                    <input type="submit" value="E" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                </div>
-                                <div class="w-40">
-                                    <input type="submit" value="F" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                    <input type="submit" value="F#" class="flex mx-auto mt-16 text-white w-20 bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-                                </div>
-                                <div class="w-40">
-                                    <input type="submit" value="G" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                    <input type="submit" value="G#" class="flex mx-auto mt-16 text-white w-20 bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-                                </div>
-                                <div class="w-40">
-                                    <input type="submit" value="A" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                    <input type="submit" value="A#" class="flex mx-auto mt-16 text-white w-20 bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
-                                </div>
-                                <div class="w-40">
-                                    <input type="submit" value="B" class="flex mx-auto mt-16 text-white w-20 bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                </div>
-
-                            </div> --}}
-
-                            <div class="w-full flex justify-center">
+                            <div class="w-full flex">
                                 <div class="w-20 mx-auto">
-                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 mx-auto">
-                                        <a class=" block w-full h-full overflow-hidden" href=""></a>
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="/scales/scale?get=C">C</a>
                                     </div>
-                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 mx-auto">
-                                        <a class=" block w-full h-full overflow-hidden" href=""></a>
+                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">C#</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
-                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10">
-                                        <a class=" block w-full h-full overflow-hidden" href=""></a>
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">D</a>
                                     </div>
-                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 mx-auto">
-                                        <a class=" block w-full h-full overflow-hidden" href=""></a>
+                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">D#</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-20 mx-auto">
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">E</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-20 mx-auto">
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">F</a>
+                                    </div>
+                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">F#</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-20 mx-auto">
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">G</a>
+                                    </div>
+                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">G#</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-20 mx-auto">
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">A</a>
+                                    </div>
+                                    <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">A#</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-20 mx-auto">
+                                    <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">B</a>
                                     </div>
                                 </div>
 

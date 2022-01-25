@@ -25,6 +25,10 @@ Route::get('/scales/index', function () {
     return view('scales.index');
 })->middleware(['auth'])->name('scales.index');
 
+Route::get('/scales/scale', function () {
+    return view('scales.scale');
+})->middleware(['auth'])->name('scales.scale');
+
 Route::resource('/posts',PostController::class);
 
 require __DIR__.'/auth.php';
