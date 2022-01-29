@@ -18,7 +18,10 @@
                                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Support Make Music<br>弾き語り作曲支援サイト</h1>
                                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                                 </div>
-                                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+                                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">弾き語り作曲支援サイトへようこそ！<br>
+                                                                                            このサイトでは、選択したキーに対応する音を閲覧することができます。<br>
+                                                                                            用意しているスケールはメジャー、マイナースケール（ペンタトニック含む）になります。<br>
+                                                                                            表示スケールはペンタトニック含め４つになりますので、他のスケールを参考にしたい場合は他のユーザー様の投稿の閲覧をお願い致します。</p>
                             </div>
 
                             <div class="mb-20 max-w-6xl">
@@ -33,58 +36,58 @@
                             <div class="w-full flex">
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="/scales/scale?get=C">C</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'C']) }}" >C</a>
                                     </div>
                                     <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">C#</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'Cs']) }}">C#</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">D</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'D']) }}">D</a>
                                     </div>
                                     <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">D#</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'Ds']) }}">D#</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">E</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'E']) }}">E</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">F</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'F']) }}">F</a>
                                     </div>
                                     <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">F#</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'Fs']) }}">F#</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">G</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'G']) }}">G</a>
                                     </div>
                                     <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">G#</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'Gs']) }}">G#</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">A</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'A']) }}">A</a>
                                     </div>
                                     <div class="h-12 w-full bg-purple-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">A#</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'As']) }}">A#</a>
                                     </div>
                                 </div>
 
                                 <div class="w-20 mx-auto">
                                     <div class="h-12 w-full bg-indigo-500 border-0 my-10 rounded-lg py-2 shadow-lg">
-                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="">B</a>
+                                        <a class=" block w-full h-full overflow-hidden text-white text-2xl text-center" href="{{ route('scales.scale',['key'=>'B']) }}">B</a>
                                     </div>
                                 </div>
 

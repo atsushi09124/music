@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ScaleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,9 +26,8 @@ Route::get('/scales/index', function () {
     return view('scales.index');
 })->middleware(['auth'])->name('scales.index');
 
-Route::get('/scales/scale', function () {
-    return view('scales.scale');
-})->middleware(['auth'])->name('scales.scale');
+Route::get('/scales/scale/{key}',[ScaleController::class,'scale'])
+->middleware(['auth'])->name('scales.scale');
 
 Route::resource('/posts',PostController::class);
 

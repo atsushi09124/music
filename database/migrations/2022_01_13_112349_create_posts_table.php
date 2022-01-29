@@ -30,18 +30,6 @@ class CreatePostsTable extends Migration
 
             $table->string('progress_chord')->nullable();
 
-            $table->string('in_chord')->nullable();
-
-            $table->string('A_chord')->nullable();
-
-            $table->string('B_chord')->nullable();
-
-            $table->string('main_chord')->nullable();
-
-            $table->string('C_chord')->nullable();
-
-            $table->string('out_chord')->nullable();
-
             $table->string('body');
             
             $table->timestamps();

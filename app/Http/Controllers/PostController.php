@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -19,7 +21,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('posts.index');
+        $posts = Post::orderBy('id','DESC')->paginate(9);
+        return view('posts.index')->with(['posts'=>$posts]);
     }
 
     /**
@@ -29,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -51,7 +54,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts = Post::where('id',$id)->first();
+        return view('posts.show',compact('posts'));
     }
 
     /**
@@ -62,7 +66,6 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
