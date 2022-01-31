@@ -70,7 +70,8 @@ class PostController extends Controller
     {
         $posts = Post::where('id',$id)->first();
         $users = User::where('id',$posts->user_id)->first();
-        return view('posts.show',compact('posts','users'));
+        $authUser = Auth::user();
+        return view('posts.show',compact('posts','users','authUser'));
     }
 
     /**

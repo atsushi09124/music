@@ -43,8 +43,14 @@
 
                                 <p class="leading-relaxed text-lg">ポイント</p>
                                 <p class="leading-relaxed text-lg mb-12 ml-16">{!! nl2br($posts->body) !!}</p>
-                                
-                                <div class="my-10 ml-60">
+
+
+                              
+
+
+
+                                @if ($authUser->id == $posts->id) 
+                                  <div class="my-10 ml-60">
                                   <a href="{{ route('posts.edit',['post'=>$posts->id]) }}" 
                                     class="text-indigo-500 inline-flex items-center">
                                     編集                                   
@@ -52,7 +58,7 @@
                                   
                                   <br>
                                   <br>
-                                  <form action="{{ route('posts.destroy',$posts->id)}}" method="POST">
+                                  <form action="{{ route('posts.destroy',['post'=>$posts->id])}}" method="POST">
                                     @method('delete')
                                     @csrf
                                     <input type="submit" value="削除" onclick="return confirm('削除しますか？')" 
@@ -65,6 +71,8 @@
                                     </svg>
                                   </a> --}}
                                 </div>
+                                @endif
+                                
                                 
 
                               </div>
