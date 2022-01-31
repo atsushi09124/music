@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+    public function findUser()
+    {
+        return $this->hasOne(User::class,'foreign_key');
+    }
 }

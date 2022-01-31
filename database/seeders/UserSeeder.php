@@ -21,11 +21,15 @@ class UserSeeder extends Seeder
             'name' => Str::random(10),
             'email' => 'test@gmail.com',
             'password' => Hash::make('password'),
+            'history' => 12,
+            'artist' => 'YOASOBI',
             ],
             [
             'name' => Str::random(10),
             'email' => 'test1@gmail.com',
             'password' => Hash::make('password'),
+            'history' => 10,
+            'artist' => 'ヨルシカ',
             ]
         ]);
 

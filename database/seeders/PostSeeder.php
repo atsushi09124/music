@@ -22,6 +22,7 @@ class PostSeeder extends Seeder
                 'name' => Str::random(10),
                 'main_key' => 'C',
                 'main_scale' => 'メジャースケール',
+                'progress_chord' => 'Am_G_C_F',
                 'body' => '明るい響きが好きです。'
             ]
         ]);

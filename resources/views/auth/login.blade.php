@@ -50,7 +50,13 @@
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>
+
+                
             </div>
         </form>
+                       
+
+        <a href="{{ route('register') }}" class=" mt-8 text-sm text-gray-700 dark:text-gray-500 underline flex justify-end">新規登録はこちら</a>
+                  
     </x-auth-card>
 </x-guest-layout>

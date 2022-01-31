@@ -18,44 +18,60 @@
                         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">作曲情報を投稿します。</h1>
                         <p class="mb-8 leading-relaxed">以下の記入欄に入力して、登録をお願い致します。</p>
 
-                        <form action="" method="POST">
+                        <form action="{{ route('posts.store') }}" enctype="multipart/form-data" method="POST">
+                            @csrf
 
                             <div class="flex w-full md:justify-start justify-center items-end mt-5">
                                 <div class="relative mr-4 md:w-1/2 lg:w-1/2 xl:w-1/2 w-2/4">
-                                    <label for="hero-field" class="leading-7 text-sm text-gray-600">メインキー</label>
-                                    <input type="text" id="hero-field" name="hero-field" 
+                                    <label for="hero-field" class="leading-7 text-sm text-gray-600">使用キー</label>
+                                    <input type="text" name="main_key" value="{{ old('main_key') }}" 
                                         class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                 </div>
                             </div>
-                            {{-- バリデーション用 --}}
-                                <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
-                            
+                            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">
+                                @if($errors->has('main_key'))
+                                    <span class="text-red-500">{{ $errors->first('main_key') }}</span>
+                                @endif
+                            </p>
+
                             <div class="flex w-full md:justify-start justify-center items-end">
                                 <div class="relative mr-4 md:w-full lg:w-full w-2/4">
                                     <label for="hero-field" class="leading-7 text-sm text-gray-600">使用スケール</label>
-                                    <input type="text" id="hero-field" name="hero-field" 
+                                    <input type="text" name="main_scale" value="{{ old('main_scale') }}" 
                                         class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                 </div>
                             </div>
-                                <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
+                            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">
+                                @if($errors->has('main_scale'))
+                                    <span class="text-red-500">{{ $errors->first('main_scale') }}</span>
+                                @endif
+                            </p>
 
                             <div class="flex w-full md:justify-start justify-center items-end">
                                 <div class="relative mr-4 md:w-full lg:w-full w-2/4">
                                     <label for="hero-field" class="leading-7 text-sm text-gray-600">コード進行</label>
-                                    <input type="text" id="hero-field" name="hero-field" 
+                                    <input type="text" name="progress_chord" value="{{ old('progress_chord') }}" 
                                         class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                 </div>
                             </div>
-                                <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
+                            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">
+                                @if($errors->has('progress_chord'))
+                                    <span class="text-red-500">{{ $errors->first('progress_chord') }}</span>
+                                @endif
+                            </p>
 
                             <div class="flex w-full md:justify-start justify-center items-end">
                                 <div class="relative mr-4 md:w-full lg:w-full w-2/4">
                                     <label for="hero-field" class="leading-7 text-sm text-gray-600">曲のポイント</label>
-                                    <input type="text" id="hero-field" name="hero-field" 
-                                        class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <textarea class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
+                                            name="body">{{ old('body')}}</textarea>
                                 </div>
                             </div>
-                                <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Neutra shabby chic ramps, viral fixie.</p>
+                            <p class="text-sm mt-2 text-gray-500 mb-8 w-full">
+                                @if($errors->has('body'))
+                                    <span class="text-red-500">{{ $errors->first('body') }}</span>
+                                @endif
+                            </p>
 
                             <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">登録</button>
                             

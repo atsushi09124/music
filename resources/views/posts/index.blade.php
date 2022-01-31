@@ -31,6 +31,12 @@
                             </div>
                         </div>
 
+                        {{-- コントローラーからのメッセージを表示 --}}
+                        @if (session('flash_message'))
+                        <div class="flash_message bg-success text-center py-3 -mt-5 text-indigo-600 text-xl">
+                            {{ session('flash_message') }}
+                        </div>
+                        @endif  
 
                         <div class="h-8 w-32 fixed bottom-14 right-14 hidden" id="newPost">
                             <a href="/posts/create" 
@@ -57,7 +63,7 @@
                                             </div>
                                             
                                             <div class="flex-grow">
-                                                <h2 class="text-gray-900 title-font font-medium">{{$post->main_scale}}</h2>
+                                                <h2 class="text-gray-900 title-font font-medium">使用キー：{{$post->main_key}}</h2>
                                                 <p class="text-gray-500 w-32">{{ Str::limit($post->body,15,'...') }}</p>
                                             </div>
                                         </div>
@@ -74,7 +80,7 @@
 
                         <div class="flex justify-center mt-8">
                                 
-                                {{-- {{$posts->links('vendor.pagination.bootstrap-contents')}} --}}
+                                {{$posts->links('vendor.pagination.post')}}
                                 
                         </div>
                         

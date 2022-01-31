@@ -28,9 +28,9 @@ class CreatePostsTable extends Migration
 
             $table->string('main_scale');
 
-            $table->string('progress_chord')->nullable();
+            $table->string('progress_chord');
 
-            $table->string('body');
+            $table->longText('body');
             
             $table->timestamps();
         });

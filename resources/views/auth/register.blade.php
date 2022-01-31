@@ -45,6 +45,19 @@
                                 name="password_confirmation" required />
             </div>
 
+            <div class="mt-4">
+                <x-label for="history" :value="__('音楽歴（年単位）')" />
+
+                <x-input id="history" class="block mt-1 w-full" type="text" name="history" :value="old('history')" required />
+            </div>
+
+
+            <div class="mt-4">
+                <x-label for="artist" :value="__('好きなアーティスト')" />
+
+                <x-input id="artist" class="block mt-1 w-full" type="text" name="artist" :value="old('artist')" required />
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
