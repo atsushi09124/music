@@ -47,30 +47,28 @@
 
                               
 
-
-
-                                @if ($authUser->id == $posts->id) 
+                                @if ($authUser->id == $posts->user_id) 
                                   <div class="my-10 ml-60">
-                                  <a href="{{ route('posts.edit',['post'=>$posts->id]) }}" 
-                                    class="text-indigo-500 inline-flex items-center">
-                                    編集                                   
-                                  </a>
-                                  
-                                  <br>
-                                  <br>
-                                  <form action="{{ route('posts.destroy',['post'=>$posts->id])}}" method="POST">
-                                    @method('delete')
-                                    @csrf
-                                    <input type="submit" value="削除" onclick="return confirm('削除しますか？')" 
-                                            class="text-indigo-500 inline-flex items-center">
-                                  </form>
+                                    <a href="{{ route('posts.edit',['post'=>$posts->id]) }}" 
+                                      class="text-indigo-500 inline-flex items-center">
+                                      編集                                   
+                                    </a>
+                                    
+                                    <br>
+                                    <br>
+                                    <form action="{{ route('posts.destroy',['post'=>$posts->id])}}" method="POST">
+                                      @method('delete')
+                                      @csrf
+                                      <input type="submit" value="削除" onclick="return confirm('削除しますか？')" 
+                                              class="text-indigo-500 inline-flex items-center">
+                                    </form>
 
-                                  {{-- <a href="{{ route('posts.destroy',$posts->id) }}" class="text-indigo-500 inline-flex items-center">削除
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                  </a> --}}
-                                </div>
+                                    {{-- <a href="{{ route('posts.destroy',$posts->id) }}" class="text-indigo-500 inline-flex items-center">削除
+                                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                      </svg>
+                                    </a> --}}
+                                  </div>
                                 @endif
                                 
                                 
