@@ -38,7 +38,7 @@
                         </div>
                         @endif  
 
-                        <div class="h-8 w-32 fixed bottom-14 right-14 hidden" id="newPost">
+                        <div class="h-8 w-32 fixed bottom-14 right-14" id="newPost">
                             <a href="/posts/create" 
                                 class="text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded md:text-lg">新規投稿</a>       
                         </div>
