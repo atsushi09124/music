@@ -11,6 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
+
+
+ 
+//  後日fontawesome用に書き換える
 mix.js('resources/js/app.js', 'public/js')
 .js('resources/js/post.js','public/js')
 .postCss('resources/css/app.css', 'public/css', [

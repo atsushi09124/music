@@ -47,41 +47,40 @@ class ScaleController extends Controller
         $minorSeventhChord = Major::where('id','=',$minorSeventhId)->first();
 
         $majorScale = [
-            'major1' => $getKey->chord,
-            'major2' => $majorSecondChord->chord,
-            'major3' => $majorThirdChord->chord,
-            'major4' => $majorFourthChord->chord,
-            'major5' => $majorFifthChord->chord,
-            'major6' => $majorSixthChord->chord,
-            'major7' => $majorSeventhChord->chord
+            $getKey->chord,
+            $majorSecondChord->chord,
+            $majorThirdChord->chord,
+            $majorFourthChord->chord,
+            $majorFifthChord->chord,
+            $majorSixthChord->chord,
+            $majorSeventhChord->chord
         ];
 
         $majorScaleP = [
-            'major1' => $getKey->chord,
-            'major2' => $majorSecondChord->chord,
-            'major3' => $majorThirdChord->chord,
-            'major5' => $majorFifthChord->chord,
-            'major6' => $majorSixthChord->chord
+            $getKey->chord,
+            $majorSecondChord->chord,
+            $majorThirdChord->chord,
+            $majorFifthChord->chord,
+            $majorSixthChord->chord
         ];
 
         $minorScale = [
-            'minor1' => $minorFirstChord->chord,
-            'minor2' => $minorSecondChord->chord,
-            'minor3' => $minorThirdChord->chord,
-            'minor4' => $minorFourthChord->chord,
-            'minor5' => $minorFifthChord->chord,
-            'minor6' => $minorSixthChord->chord,
-            'minor7' => $minorSeventhChord->chord
+            $minorFirstChord->chord,
+            $minorSecondChord->chord,
+            $minorThirdChord->chord,
+            $minorFourthChord->chord,
+            $minorFifthChord->chord,
+            $minorSixthChord->chord,
+            $minorSeventhChord->chord
         ];
 
         $minorScaleP = [
-            'minor1' => $minorFirstChord->chord,
-            'minor3' => $minorThirdChord->chord,
-            'minor4' => $minorFourthChord->chord,
-            'minor5' => $minorFifthChord->chord,
-            'minor7' => $minorSeventhChord->chord
+            $minorFirstChord->chord,
+            $minorThirdChord->chord,
+            $minorFourthChord->chord,
+            $minorFifthChord->chord,
+            $minorSeventhChord->chord
         ];
-
         return view('scales.scale',compact('majorScale','majorScaleP','minorScale','minorScaleP'));
 
     }

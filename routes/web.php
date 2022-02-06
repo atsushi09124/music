@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ScaleController;
@@ -30,5 +31,9 @@ Route::get('/scales/scale/{key}',[ScaleController::class,'scale'])
 ->middleware(['auth'])->name('scales.scale');
 
 Route::resource('/posts',PostController::class);
+
+Route::get('/niceArtisan',[NiceController::class,'niceArtisan'])
+->middleware('auth')->name('nices.niceArtisan');
+
 
 require __DIR__.'/auth.php';

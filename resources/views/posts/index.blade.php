@@ -55,16 +55,29 @@
 
                                             <div class="w-12 mr-4 flex-shrink-0 flex flex-col text-center leading-none">
                                                 <span class="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-                                                    {{ substr($post->created_at,5,2) }}
+                                                    @if (substr($post->created_at,5,1)==0)
+                                                        {{ substr($post->created_at,6,1) }}
+                                                    @else
+                                                        {{ substr($post->created_at,5,2) }}
+                                                    @endif
                                                 </span>
                                                 <span class="font-medium text-lg text-gray-800 title-font leading-none">
-                                                    {{ substr($post->created_at,8,2) }}
+                                                    @if (substr($post->created_at,8,1)==0)
+                                                        {{ substr($post->created_at,9,1) }}
+                                                    @else
+                                                        {{ substr($post->created_at,8,2) }}
+                                                    @endif
                                                 </span>
                                             </div>
                                             
                                             <div class="flex-grow">
                                                 <h2 class="text-gray-900 title-font font-medium">使用キー：{{$post->main_key}}</h2>
                                                 <p class="text-gray-500 w-32">{{ Str::limit($post->body,15,'...') }}</p>
+                                            </div>
+
+                                            <div class="ml-10">
+                                                <p class="text-gray-500 w-32 text-sm">投稿者</p>
+                                                <p class="text-gray-500 w-32 text-xs">{{ Str::limit($post->name,10,'...') }}</p>
                                             </div>
                                         </div>
                                     </a>   

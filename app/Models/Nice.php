@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Nice extends Model
 {
     use HasFactory;
+
+    public function post()
+    {
+        return $this->hasone(Post::class);
+        
+    }
 }

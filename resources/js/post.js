@@ -1,13 +1,53 @@
-
 $(function(){
+
+    // indexの新規投稿のjs
     $(window).scroll(function()
     {
         const scrollTop = $(this).scrollTop();
         if(scrollTop > 10)
         {
             $('#newPost').fadeOut(100);
+        }else{
+            $('#newPost').fadeIn(100);
         }
 
     });
-});
 
+
+    // niceのいいね機能ajax
+    $('#nice').on('click',function () {
+
+        var id = $('#nice').val();
+        // post_idがなければfalse
+        if(!id){
+            return false;
+        }
+
+        // ajax通信
+        $.ajaxSetup({
+            headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+            },
+        });
+
+        $.ajax({
+        //POST通信
+        type: "get",
+        // リクエストURL
+        url: "/niceArtisan",
+        dataType: "json",
+        data: {'id':id},
+        })
+        //通信が成功したとき
+        .then(function(res){
+            console.log(res.message);
+        })
+        //通信が失敗したとき
+        .fail(function(error){
+            console.log(error.statusText);
+        });
+        return false;
+    });
+
+
+});
