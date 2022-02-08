@@ -39,8 +39,8 @@
 
                                 {{-- ↓後日ハートのマークに変更 --}}
                                 {{-- <i class="fas fa-heart"></i> --}}
-                                <div class="ml-60">
-                                  <button id="nice" class="text-4xl" value="{{$posts->id}}">♡</button>
+                                <div class="ml-60 text-4xl">
+                                  <button id="nice" class="@if ((!empty($nices->flg)))&&(($nices->flg == 1)) text-pink-500 @endif" value="{{$posts->id}}">♡</button>
                                 </div>
                                 
                                 <p class="leading-relaxed text-xl mb-4 underline">曲情報<br></p>

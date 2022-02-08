@@ -1,4 +1,8 @@
-
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!******************************!*\
+  !*** ./resources/js/post.js ***!
+  \******************************/
 $(function () {
   // indexの新規投稿のjs
   $(window).scroll(function () {
@@ -9,21 +13,16 @@ $(function () {
     } else {
       $('#newPost').fadeIn(100);
     }
-  }); 
-  
-  
-  
-  // niceのいいね機能ajax
+  }); // niceのいいね機能ajax
 
   $('#nice').on('click', function () {
-    var id = $('#nice').val(); 
-    
-    // post_idがなければfalse
+    var id = $('#nice').val(); // post_idがなければfalse
+
     if (!id) {
       return false;
-    } 
-    
-    // ajax通信
+    } // ajax通信
+
+
     $.ajaxSetup({
       headers: {
         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
@@ -40,11 +39,15 @@ $(function () {
       }
     }) //通信が成功したとき
     .then(function (res) {
-      console.log(res.message);
+      $('#nice').toggleClass('text-pink-500');
+      console.log(res);
+      return true;
     }) //通信が失敗したとき
     .fail(function (error) {
-      console.log(error.statusText);
+      console.log(error);
     });
     return false;
   });
 });
+/******/ })()
+;

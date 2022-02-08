@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRequest;
+use App\Models\Nice;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -71,7 +72,8 @@ class PostController extends Controller
         $posts = Post::where('id',$id)->first();
         $users = User::where('id',$posts->user_id)->first();
         $authUser = Auth::user();
-        return view('posts.show',compact('posts','users','authUser'));
+        $nices = Nice::where('post_id',$id)->where('user_id',$authUser->id)->first();
+        return view('posts.show',compact('posts','users','authUser','nices'));
     }
 
     /**

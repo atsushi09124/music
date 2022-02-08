@@ -38,13 +38,16 @@ $(function(){
         dataType: "json",
         data: {'id':id},
         })
+        
         //通信が成功したとき
         .then(function(res){
-            console.log(res.message);
+            $('#nice').toggleClass('text-pink-500');
+            console.log(res);
+            return true;
         })
         //通信が失敗したとき
         .fail(function(error){
-            console.log(error.statusText);
+            console.log(error);
         });
         return false;
     });

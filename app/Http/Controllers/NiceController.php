@@ -10,13 +10,30 @@ class NiceController extends Controller
 {
     public function niceArtisan(Request $request)
     {
-        // ここではfav_flg０がお気に入り数、１はお気に入り解除とする
+        // niceテーブルのflg取得
+        $checkUser = Nice::where('post_id','=',$request->id)->where('user_id','=',Auth::user()->id)->first();
         $nice = new Nice;
-        $nice->post_id = $request->id;
-        $nice->user_id = Auth::user()->id;
-        $nice->save();
 
-        
+        if(empty($checkUser->id))
+        {
+            // 1がお気に入り数
+            $nice->post_id = $request->id;
+            $nice->user_id = Auth::user()->id;
+            $nice->save();
+        }
+        elseif($checkUser->flg == 1)
+        {
+            $checkUser->flg = 0;
+            $checkUser->save();
+        }
+        elseif($checkUser->flg == 0)
+        {
+            $checkUser->flg = 1;
+            $checkUser->save();
+        }
 
+        $message = '成功';
+        echo json_encode($message);
+        exit();
     }
 }

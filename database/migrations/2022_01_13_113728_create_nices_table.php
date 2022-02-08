@@ -28,7 +28,7 @@ class CreateNicesTable extends Migration
             ->foreign('user_id')->references('id')->on('users')
             ->onUpdate('CASCADE')->onDelete('CASCADE');
 
-            $table->integer('flg')->default(0);
+            $table->integer('flg')->default(1);
 
             $table->timestamps();
         });
